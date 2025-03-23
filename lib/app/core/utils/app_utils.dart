@@ -5,7 +5,6 @@ import 'dart:math' as mth;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
 import '../../routes/routes.dart';
@@ -35,11 +34,9 @@ class AppUtils {
     int month = noOfDays ~/ 30;
     noOfDays = noOfDays % 30;
 
-    int week = noOfDays ~/ 7;
     noOfDays = noOfDays % 7;
 
     String result = "$year Year $month Months ";
-        //"$week Weeks";
     return result;
   }
 
@@ -192,9 +189,6 @@ class AppUtils {
       String value) async {
     CroppedFile? croppedImage = await ImageCropper().cropImage(
       sourcePath: value,
-      aspectRatioPresets: [
-        CropAspectRatioPreset.square,
-      ],
       uiSettings: [
         AndroidUiSettings(
             toolbarTitle: 'Crop Image',

@@ -49,11 +49,8 @@ class LeavePage extends StatelessWidget {
                   glowColor: controller.leaveBalance.value > 0
                       ? AppColors.kPrimaryDeep
                       : AppColors.kMainBlackColor,
-                  endRadius: Dimensions.height45 * 3.5,
                   duration: const Duration(milliseconds: 2000),
                   repeat: false,
-                  showTwoGlows: false,
-                  repeatPauseDuration: const Duration(milliseconds: 50),
                   child: Material(
                     // Replace this child with your own
                     elevation: 20.0,
